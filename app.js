@@ -206,31 +206,31 @@ function objects_shop()
 
     const Array =
     [
-        {id:'', type:'action figure', name:'Pain (nagato)', price:82.99, quantitiy: 1, img : 'pain.PNG', desc : 'the leader of the Akatsuki who wishes to capture the tailed beasts sealed into the jinchurikis and unite the world trough pain',},
-        {id:'', type:'action figure', name:'Uchiha Obito', price:99.99, quantitiy: 1, img : 'obito.PNG', desc : 'Obito Uchiha, the fallen angel of the hiddean leaf village, the Naruto that lost hope. Despite tragedy & villainy, remains complex & intriguing..',},
-        {id:'', type:'action figure', name:'Uchiha Madara', price:110.99, quantitiy: 1, img : 'madara.jpg', desc : 'Madara Uchiha is one of the main antagonists of the Naruto franchise. He is the co-founder of the Hidden leaf village and its first Rogue Ninja. Though thought to have died, Madara survived and planned to rule the Ninja World as a god, making Obito Uchiha into his apprentice.',},
-        {id:'', type:'action figure', name:'Naruto uzumaki', price:129.99, quantitiy: 1, img : 'naruto.PNG', desc : "Naruto Uzumaki is a the main character and he's a ninja from the Hidden Leaf Village, determined to become Hokage to prove to the people of the hidden leaf that he is not a monster",},
-        {id:'', type:'action figure', name:'hashirama Senju', price:112.99, quantitiy: 1, img : 'hashirama.PNG', desc : 'Hashirama Senju, etern rival of Madara Uchiha, Legendary Hokage also referred to as the God of Shinobi, co-founder of the hidden lead vilage, and master of Wood Style jutsu.',},
-        {id:'', type:'action figure', name:'Kakashi Hatake', price:90.99, quantitiy: 1, img : 'movie-8.jpg', desc : 'Hatake Kakashi, is a skilled and mysterious ninja from the village of Konoha. With his trademark mask covering half of his face and his calm attitude, he has gained a reputation as one of the strongest and most respected members of the village.',},
-        {id:'', type:'action figure', name:'Sasuke Uchiha', price:120.99, quantitiy: 1, img : 'sasuke.jpg', desc : 'Sasuke Uchiha is a skilled and powerful ninja from the Uchiha clan, known for his exceptional fighting skills and intelligence. He is driven by a desire for revenge against his older brother, Itachi, who killed their entire clan and left Sasuke as the sole survivor. Sasuke is often cold and aloof, but he also deeply cares for his comrades and will do anything to protect them.',},
-        {id:'', type:'action figure', name:'Minato namikaze', price:104.99,quantitiy: 1, img : 'minato.PNG', desc : "Minato Namikaze, father of Naruto and 4th Hokage, was a genius shinobi with incredible speed and amazing combat skills. He single-handedly ended the Third Great Ninja War and saved the entire alliance in the Fourth Great Ninja War. Widely regarded as one of the strongest shinobi in Naruto's world, he ranks among the greatest in history.",},
-        {id:'', type:'action figure', name:'Gaara', price:80.99, quantitiy: 1,img : 'gaara.PNG', desc : "Gaara is a complex character in Naruto with a tragic backstory. He is the jinchuriki of the One-Tailed Shukaku, which causes him to be feared and isolated from others in his village. Gaara's harsh upbringing leads him to believe that the only way to protect himself is through violence. However, through his interactions with Naruto, he learns the value of friendship and eventually becomes the Kazekage of his village. Gaara's sand powers make him a formidable opponent in battle, and his growth as a character is inspiring.",},
-        {id:'', type:'action figure', name:'Jiraya', price:78.99, quantitiy: 1, img : 'jiraya.PNG', desc : 'Jiraya, one of the 3 legendary sannins, sensei of the strongest shinobi ever, Naruto, aswell as the 4th hokage Minato, also teached Pain, Konan, Yahiko and.',},
-        {id:'', type:'action figure', name:'Shikamaru Nara', price:70.99, quantitiy: 1,img : 'shikamaru.PNG', desc : 'Shikamaru Nara is a genius ninja from the hidden leaf village. He is a lazy and calm character who is often seen playing shogi. However, he possesses an IQ of over 200 and is a master strategist. He is skilled in shadow manipulation and uses his abilities to control and restrain his enemies. Despite his reluctance to engage in battles, he is fiercely loyal to his friends and will do whatever it takes to protect them.',},
-        {id:'', type:'action figure', name:'Itachi Uchiha', price:89.99, quantitiy: 1, img : 'itachi.PNG', desc : "as a shinobi of Konohagakure's Uchiha clan who served as an Anbu Captain. He later became an international criminal after murdering his entire clan, sparing only his younger brother, Sasuke. He afterwards joined the international criminal organisation known as Akatsuki",},
+        {id:'', type:'action figure', name:'Pain (nagato)', price:82.99, shipping: 2.99, quantitiy: 1, img : 'pain.PNG', desc : 'the leader of the Akatsuki who wishes to capture the tailed beasts sealed into the jinchurikis and unite the world trough pain',},
+        {id:'', type:'action figure', name:'Uchiha Obito', price:99.99, shipping: 5.99, quantitiy: 1, img : 'obito.PNG', desc : 'Obito Uchiha, the fallen angel of the hiddean leaf village, the Naruto that lost hope. Despite tragedy & villainy, remains complex & intriguing..',},
+        {id:'', type:'action figure', name:'Uchiha Madara', price:110.99,shipping: 3.99, quantitiy: 1, img : 'madara.jpg', desc : 'Madara Uchiha is one of the main antagonists of the Naruto franchise. He is the co-founder of the Hidden leaf village and its first Rogue Ninja. Though thought to have died, Madara survived and planned to rule the Ninja World as a god, making Obito Uchiha into his apprentice.',},
+        {id:'', type:'action figure', name:'Naruto uzumaki', price:129.99,shipping: 1.99, quantitiy: 1, img : 'naruto.PNG', desc : "Naruto Uzumaki is a the main character and he's a ninja from the Hidden Leaf Village, determined to become Hokage to prove to the people of the hidden leaf that he is not a monster",},
+        {id:'', type:'action figure', name:'hashirama Senju', price:112.99, shipping: 4.99,quantitiy: 1, img : 'hashirama.PNG', desc : 'Hashirama Senju, etern rival of Madara Uchiha, Legendary Hokage also referred to as the God of Shinobi, co-founder of the hidden lead vilage, and master of Wood Style jutsu.',},
+        {id:'', type:'action figure', name:'Kakashi Hatake', price:90.99, shipping: 2.99,quantitiy: 1, img : 'movie-8.jpg', desc : 'Hatake Kakashi, is a skilled and mysterious ninja from the village of Konoha. With his trademark mask covering half of his face and his calm attitude, he has gained a reputation as one of the strongest and most respected members of the village.',},
+        {id:'', type:'action figure', name:'Sasuke Uchiha', price:120.99, shipping: 2.99,quantitiy: 1, img : 'sasuke.jpg', desc : 'Sasuke Uchiha is a skilled and powerful ninja from the Uchiha clan, known for his exceptional fighting skills and intelligence. He is driven by a desire for revenge against his older brother, Itachi, who killed their entire clan and left Sasuke as the sole survivor. Sasuke is often cold and aloof, but he also deeply cares for his comrades and will do anything to protect them.',},
+        {id:'', type:'action figure', name:'Minato namikaze', price:104.99,shipping: 3.99,quantitiy: 1, img : 'minato.PNG', desc : "Minato Namikaze, father of Naruto and 4th Hokage, was a genius shinobi with incredible speed and amazing combat skills. He single-handedly ended the Third Great Ninja War and saved the entire alliance in the Fourth Great Ninja War. Widely regarded as one of the strongest shinobi in Naruto's world, he ranks among the greatest in history.",},
+        {id:'', type:'action figure', name:'Gaara', price:80.99, quantitiy: 1,shipping: 2.99,img : 'gaara.PNG', desc : "Gaara is a complex character in Naruto with a tragic backstory. He is the jinchuriki of the One-Tailed Shukaku, which causes him to be feared and isolated from others in his village. Gaara's harsh upbringing leads him to believe that the only way to protect himself is through violence. However, through his interactions with Naruto, he learns the value of friendship and eventually becomes the Kazekage of his village. Gaara's sand powers make him a formidable opponent in battle, and his growth as a character is inspiring.",},
+        {id:'', type:'action figure', name:'Jiraya', price:78.99, quantitiy: 1, shipping: 7.99,img : 'jiraya.PNG', desc : 'Jiraya, one of the 3 legendary sannins, sensei of the strongest shinobi ever, Naruto, aswell as the 4th hokage Minato, also teached Pain, Konan, Yahiko and.',},
+        {id:'', type:'action figure', name:'Shikamaru Nara', price:70.99, quantitiy: 1,shipping: 1.99,img : 'shikamaru.PNG', desc : 'Shikamaru Nara is a genius ninja from the hidden leaf village. He is a lazy and calm character who is often seen playing shogi. However, he possesses an IQ of over 200 and is a master strategist. He is skilled in shadow manipulation and uses his abilities to control and restrain his enemies. Despite his reluctance to engage in battles, he is fiercely loyal to his friends and will do whatever it takes to protect them.',},
+        {id:'', type:'action figure', name:'Itachi Uchiha', price:89.99, quantitiy: 1, shipping: 2.99,img : 'itachi.PNG', desc : "as a shinobi of Konohagakure's Uchiha clan who served as an Anbu Captain. He later became an international criminal after murdering his entire clan, sparing only his younger brother, Sasuke. He afterwards joined the international criminal organisation known as Akatsuki",},
 
-        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, img : 'movie_1.jpg', desc : "Naruto film abt ......",},
-        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, img : 'movie-6.png', desc : "Naruto film abt ......",},
-        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, img : 'movie-4.jpg', desc : "Naruto film abt ......",},
-        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, img : 'movie_2.jpg', desc : "Naruto film abt ......",},
-        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, img : 'movie-3.png', desc : "Naruto film abt ......",},
-        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, img : 'song_8.PNG', desc : "Naruto film abt ......",},
+        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, shipping: 1.99,img : 'movie_1.jpg', desc : "Naruto film abt ......",},
+        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, shipping: 2.99,img : 'movie-6.png', desc : "Naruto film abt ......",},
+        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, shipping: 2.49,img : 'movie-4.jpg', desc : "Naruto film abt ......",},
+        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, shipping: 2.99,img : 'movie_2.jpg', desc : "Naruto film abt ......",},
+        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, shipping: 2.79,img : 'movie-3.png', desc : "Naruto film abt ......",},
+        {id:'', type:'movies', name:'Naruto: The Last', price:82.99, quantitiy: 1, shipping: 2.29,img : 'song_8.PNG', desc : "Naruto film abt ......",},
 
-        {id:'', type:'songs', name:'Ost 1', song:'e829545714efa52591e584984c9f7a28.mp3', price:9.99, quantitiy: 1, img : 'song-5.jpg', desc : "Naruto song abt ......",},
-        {id:'', type:'songs', name:'Ost 2', song:'c63a519c1543ec035838f51966797c2d.mp3', price:9.99, quantitiy: 1, img : 'song_1.jpg', desc : "Naruto song abt ......",},
-        {id:'', type:'songs', name:'Ost 3', song:'e829545714efa52591e584984c9f7a28.mp3', price:9.99, quantitiy: 1, img : 'song_2.jpg', desc : "Naruto song abt ......",},
-        {id:'', type:'songs', name:'Ost 3', song:'e829545714efa52591e584984c9f7a28.mp3', price:9.99, quantitiy: 1, img : 'song_3.jpg', desc : "Naruto song abt ......",},
-        {id:'', type:'songs', name:'Ost 3', song:'e829545714efa52591e584984c9f7a28.mp3', price:9.99, quantitiy: 1, img : 'song_4.jpg', desc : "Naruto song abt ......",},
+        {id:'', type:'songs', name:'Ost 1', song:'e829545714efa52591e584984c9f7a28.mp3', shipping: 0.99,price:9.99, quantitiy: 1, img : 'song-5.jpg', desc : "Naruto song abt ......",},
+        {id:'', type:'songs', name:'Ost 2', song:'c63a519c1543ec035838f51966797c2d.mp3', shipping: 1.99,price:9.99, quantitiy: 1, img : 'song_1.jpg', desc : "Naruto song abt ......",},
+        {id:'', type:'songs', name:'Ost 3', song:'e829545714efa52591e584984c9f7a28.mp3', shipping: 2.99,price:9.99, quantitiy: 1, img : 'song_2.jpg', desc : "Naruto song abt ......",},
+        {id:'', type:'songs', name:'Ost 3', song:'e829545714efa52591e584984c9f7a28.mp3', shipping: 5.99,price:9.99, quantitiy: 1, img : 'song_3.jpg', desc : "Naruto song abt ......",},
+        {id:'', type:'songs', name:'Ost 3', song:'e829545714efa52591e584984c9f7a28.mp3', shipping: 1.99,price:9.99, quantitiy: 1, img : 'song_4.jpg', desc : "Naruto song abt ......",},
 
     ]// remember to run for loop for add id[i];
 
@@ -311,33 +311,85 @@ function objects_shop()
         }
     }
 
-
+    const row = document.querySelector(".row");
+  
     const btn = document.querySelectorAll(".btn");
+
+
+    let count = 0;
     btn.forEach(btn =>
         {
+
+
+
+
             btn.addEventListener('click', (e) =>{
 
+                row.innerHTML = "";
+
+              console.clear()
+
+                //Default
+              if(Array_Cart.length == 0){
+               
+                    Array_Cart.push(Array[btn.id]);
+              }else{
+
+               // console.log("Min 1Item already exitsts ");     
+                // console.log(Array_Cart);
+                // console.log(Array_Cart[Array_Cart.length - 1])
+                if(Array_Cart[Array_Cart.length - 1].id == e.target.id){
+                    console.log("Item already exists " + Array_Cart[e.target.id]);
+                    Array_Cart[Array_Cart.length - 1].quantitiy += 1;
+
+                    console.log(Array_Cart[Array_Cart.length - 1].quantitiy);
+                    
+                }else{
+                    Array_Cart.push(Array[btn.id]);
+                }
 
 
-                Array_Cart.push(Array[btn.id]);
-                console.log(btn.id)
-                console.log(Array_Cart);
+
+                    //console.log(e.target.id + " vs " + Array_Cart[e.target.id - 1].id)
+
+                    
+
+                //console.log(Array_Cart[i])
+                console.log(Array_Cart)
+                console.log("Count " + count)
+
+
+                
+            }
+            
+               
+                //ADD ONTO, oben wird erst hiernach ausgeführt
+             
+
+
+
+
+
+
+
+
+
+
+
+//Display sth
+
                 for(let k=0;k<Array_Cart.length;k++)
                 {
-
                 console.log(Array_Cart[k]);
                 console.log(Array_Cart)
-                console.log(k)
 
-                DisplayCartItems(`img/${Array_Cart[k].img}`, Array_Cart[k].name, Array[k].desc, Array[k].price, Array[k].quantitiy);
+                
+                DisplayCartItems(`img/${Array_Cart[k].img}`, Array_Cart[k].name, Array[k].desc, Array[k].price, Array_Cart[k].quantitiy, Array_Cart);
                 }
-               // console.log(e.target)
 
-               // AddtoCart(e.target)
-            
+               console.log("--------NEW--------");
               
-    
-        
+
 
 
             });
@@ -349,55 +401,11 @@ function objects_shop()
 
 
 
-let l = Array_Cart.length;
-console.log(l);
-
-
-function AddtoCart(btn){
-        Array_Cart.push(Array[btn.id]);
-        console.log(btn.id)
-        console.log(Array_Cart);
-}
-
-function Display (){
-    for(let k=0;k<Array_Cart.length;k++)
-    {
-        console.log(Array_Cart[k]);
-        console.log(Array_Cart)
-        console.log(k)
 
 
 
-        DisplayCartItems(`img/${Array_Cart[k].img}`, Array_Cart[k].name, Array[k].desc, Array[k].price, 1);
-       
-    }
-}
 
 
-
-const placeorder = document.querySelector(".place");
-
-placeorder.addEventListener("click", () =>{
-
-console.log(GetSum(Array_Cart));
-
-});
-
-function GetSum (arr) {
-
-let sumall = 0;
-
-    for(let i=0;i<arr.length;i++)
-    {
-
-sumall += arr[i].price;
-
-}
-
-return sumall;
-
-
-}
 
 
 function execute_functions()

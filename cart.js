@@ -1,5 +1,5 @@
-const box = document.querySelector(".box");
-box.style.marginTop = '0px';
+//const box = document.querySelector(".box");
+//box.style.marginTop = '0px';
 const quantity = document.querySelectorAll(".quantity");
 const container = document.querySelector(".container");
 const can = document.querySelectorAll(".can");
@@ -54,8 +54,9 @@ function cart()
     
 }
 
+let count = 0;
+ export function DisplayCartItems (imgsrc, name, desc, price, quantity, arr) {
 
- export function DisplayCartItems (imgsrc, name, desc, price, quantity) {
 
 let box = document.createElement("div");
 box.classList.add("box");
@@ -105,6 +106,15 @@ bottom.appendChild(bottom_right);
 let minus = document.createElement("div");
 minus.classList.add("minus-add");
 minus.innerHTML = '<i class="fa-solid fa-minus minus"></i>';
+minus.addEventListener("click", () =>{
+    quantity -= 1;
+    console.log("gave - 1 and change quantity to :" + quantity)
+
+    for(let i = 0; i < Array_Cart; i++){
+        console.log(quantity);
+    }
+
+});
 bottom_left.appendChild(minus);
 
 
@@ -116,14 +126,39 @@ bottom_left.appendChild(q);
 let plus = document.createElement("div");
 plus.classList.add("plus-add");
 plus.innerHTML = '<i class="fa-solid fa-plus plus"></i>';
+plus.addEventListener("click", () =>{
+    quantity += 1;
+    console.log("gave + 1 and change quantity to :" + quantity)
+
+    for(let i = 0; i < Array_Cart; i++){
+        console.log(quantity);
+    }
+
+});
 bottom_left.appendChild(plus);
 
 let trash = document.createElement("div");
 trash.classList.add("can-add");
 trash.innerHTML = '<i class="fa-solid fa-trash-can can"></i>';
+trash.id = count;
+trash.addEventListener("click", () =>{
+
+    Remove(arr, trash);
+    console.log(arr);
+
+});
+
+
 bottom_right.appendChild(trash);
 
 }
+
+function Remove(arr, item){
+arr.splice(item.id, 1);
+}
+
+
+
 
 
 export let Array_Cart = [];
@@ -132,6 +167,67 @@ export let Array_Cart = [];
 
 
 
+const price1 = document.querySelector(".price_info");
+const price2 = document.querySelector(".price2_info");
+const price3 = document.querySelector(".price3_info");
+const placeorder = document.querySelector(".place");
+
+placeorder.addEventListener("click", () =>{
+
+
+
+price1.textContent = GetSum(Array_Cart);
+price2.textContent = ShippingSum(Array_Cart);
+price3.textContent = GetTotal();
+
+
+
+});
+
+
+function GetTotal(){
+    let total = 0;
+
+total = GetSum(Array_Cart) + ShippingSum(Array_Cart);
+    return total.toFixed(2);
+}
+
+
+
+
+function ShippingSum(arr){
+    let shippingtotal = 0;
+    console.log("SHIPPING: " + arr.length);
+    for(let i=0;i<arr.length;i++)
+    {
+
+        shippingtotal += arr[i].shipping;
+    }
+
+return shippingtotal;
+}
+
+
+
+
+function GetSum (arr) {
+    let sumall = 0;
+    console.log("GETSUM: " + arr.length);
+
+    for(let i=0;i<arr.length;i++)
+    {
+   let res = arr[i].price * arr[i].quantitiy;
+   console.log(res + " with price: " +  arr[i].price +  " and quantitiy: " +  arr[i].quantitiy) 
+
+sumall += res;
+
+}
+
+console.log(sumall)
+return sumall;
+
+
+}
 
 
 
