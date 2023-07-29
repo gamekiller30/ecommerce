@@ -127,7 +127,7 @@ bottom_right.appendChild(trash);
 
 
 export let Array_Cart = [];
-console.log(Array_Cart);
+//console.log(Array_Cart);
 
 
 
