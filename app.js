@@ -1,11 +1,30 @@
 
-import { Array_Cart,DisplayCartItems } from "./cart.js";
+import { Array_Cart,DisplayCartItems, ShowPrices, CheckforPrices} from "./cart.js";
 
 const profile_img = document.querySelector(".prof_img_container");
 const shop_wrapper = document.querySelector(".shop_wrapper");
 const index_wrapper = document.querySelector(".index_wrapper");
 profile_img.addEventListener('click',()=>
 {
+
+//First Check if Values in Array exist then add Cart Item . then Checkprices .then showprices
+
+
+CheckforPrices().then( (su, s, t) => {
+
+    console.log("success");
+    ShowPrices(su, s, t);
+
+}).catch(
+    (err) =>{
+        console.error("ERROR " + err);
+    }
+);
+   
+
+
+
+
     document.head.innerHTML = `<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -371,7 +390,7 @@ if(test != true){
                 //console.log("ARRAY CART " + Array_Cart[k]); 
 console.log(Array_Cart[k].id)
 
-                DisplayCartItems(`img/${Array_Cart[k].img}`, Array_Cart[k].name, Array[k].desc, Array[k].price, GetQuantity(Array_Cart[k].quantitiy), Array_Cart, Array_Cart[k].id);
+                DisplayCartItems(`img/${Array_Cart[k].img}`, Array_Cart[k].name, Array[k].desc, Array[k].price, GetQuantity(Array_Cart[k].quantitiy), Array_Cart, k);
                 }
 
                console.log("--------NEW--------");

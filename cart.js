@@ -113,19 +113,24 @@ minus.addEventListener("click", () =>{
     console.log(id);
 
     if(quantity > 1){
-        console.log(Array_Cart[id - 1]);
-        console.log(arr[id - 1].quantitiy);
-        arr[id - 1].quantitiy -= 1;
-        quantity =  arr[id - 1].quantitiy;
+        console.log(Array_Cart[id]);
+        console.log(arr[id].quantitiy);
+        arr[id].quantitiy -= 1;
+        quantity =  arr[id].quantitiy;
         q.textContent = quantity;
-        console.log("gave - 1 and change quantity to :" + arr[id - 1].quantitiy)
-    }else{
+        console.log("gave - 1 and change quantity to :" + arr[id].quantitiy)
+        ShowPrices();
+    }
+    /* Removes item < 1 Quantity
+    else{
         //Remove Item
+
+        //Loop trough all items and lower the ids by 1???
         Remove(arr, trash);
         console.log(arr);
         console.log("Item removed");
     }
- 
+ */
 
  
 
@@ -145,12 +150,13 @@ plus.classList.add("plus-add");
 plus.innerHTML = '<i class="fa-solid fa-plus plus"></i>';
 plus.addEventListener("click", () =>{
     console.log(id);
-    console.log(Array_Cart[id - 1]);
-    console.log(arr[id - 1].quantitiy);
-    arr[id - 1].quantitiy += 1;
-    quantity =  arr[id - 1].quantitiy;
+    console.log(Array_Cart[id]);
+    console.log(arr[id].quantitiy);
+    arr[id].quantitiy += 1;
+    quantity =  arr[id].quantitiy;
     q.textContent = quantity;
-    console.log("gave + 1 and change quantity to :" + arr[id - 1].quantitiy)
+    console.log("gave + 1 and change quantity to :" + arr[id].quantitiy)
+    ShowPrices();
   
 
 });
@@ -176,7 +182,7 @@ function Remove(arr, item){
 arr.splice(item.id, 1);
 
 //Display Cart again
-DisplayCart();
+//DisplayCart();
 }
 
 
@@ -196,18 +202,43 @@ const placeorder = document.querySelector(".place");
 
 placeorder.addEventListener("click", () =>{
 
-
-
-price1.textContent = "$ " + GetSum(Array_Cart);
-price2.textContent = "$ " + ShippingSum(Array_Cart);
-price3.textContent = "$ " + GetTotal();
-
-
-
 });
 
 
-function GetTotal(){
+export function CheckforPrices(){
+
+const sum = GetSum(Array_Cart);
+const shipping = ShippingSum(Array_Cart);
+const total = GetTotal();
+
+const promise = new Promise( (resolve, reject) =>{
+
+    if((sum != undefined && sum != null) && (shipping != undefined && shipping != null) && (total != undefined && total != null)){
+
+        //resolve
+        resolve(sum, shipping, total);
+    }else{
+    
+        //reject
+        reject();
+    }
+});
+
+
+return promise;
+
+}
+
+
+export function ShowPrices(sum, ship, total){
+    price1.textContent = "$ " + GetSum(Array_Cart);
+    price2.textContent = "$ " + ShippingSum(Array_Cart);
+    price3.textContent = "$ " + GetTotal();
+}
+
+
+
+ function GetTotal(){
     let total = 0;
 
 total = GetSum(Array_Cart) + ShippingSum(Array_Cart);
@@ -217,7 +248,7 @@ total = GetSum(Array_Cart) + ShippingSum(Array_Cart);
 
 
 
-function ShippingSum(arr){
+ function ShippingSum(arr){
     let shippingtotal = 0;
     console.log("SHIPPING: " + arr.length);
     for(let i=0;i<arr.length;i++)
@@ -232,7 +263,7 @@ return shippingtotal;
 
 
 
-function GetSum (arr) {
+ function GetSum (arr) {
     let sumall = 0;
     console.log("GETSUM: " + arr.length);
 
