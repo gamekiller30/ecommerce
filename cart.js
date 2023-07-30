@@ -1,3 +1,5 @@
+import { GetQuantity } from "./app.js";
+
 //const box = document.querySelector(".box");
 //box.style.marginTop = '0px';
 const quantity = document.querySelectorAll(".quantity");
@@ -55,7 +57,7 @@ function cart()
 }
 
 let count = 0;
- export function DisplayCartItems (imgsrc, name, desc, price, quantity, arr) {
+ export function DisplayCartItems (imgsrc, name, desc, price, quantity, arr, id) {
 
 
 let box = document.createElement("div");
@@ -107,15 +109,29 @@ let minus = document.createElement("div");
 minus.classList.add("minus-add");
 minus.innerHTML = '<i class="fa-solid fa-minus minus"></i>';
 minus.addEventListener("click", () =>{
-    quantity -= 1;
-    console.log("gave - 1 and change quantity to :" + quantity)
 
-    for(let i = 0; i < Array_Cart; i++){
-        console.log(quantity);
+    console.log(id);
+
+    if(quantity > 1){
+        console.log(Array_Cart[id - 1]);
+        console.log(arr[id - 1].quantitiy);
+        arr[id - 1].quantitiy -= 1;
+        quantity =  arr[id - 1].quantitiy;
+        q.textContent = quantity;
+        console.log("gave - 1 and change quantity to :" + arr[id - 1].quantitiy)
+    }else{
+        //Remove Item
+        Remove(arr, trash);
+        console.log(arr);
+        console.log("Item removed");
     }
+ 
+
+ 
 
 });
 bottom_left.appendChild(minus);
+
 
 
 let q = document.createElement("h3");
@@ -123,16 +139,19 @@ q.classList.add("quantity");
 q.textContent = quantity;
 bottom_left.appendChild(q);
 
+
 let plus = document.createElement("div");
 plus.classList.add("plus-add");
 plus.innerHTML = '<i class="fa-solid fa-plus plus"></i>';
 plus.addEventListener("click", () =>{
-    quantity += 1;
-    console.log("gave + 1 and change quantity to :" + quantity)
-
-    for(let i = 0; i < Array_Cart; i++){
-        console.log(quantity);
-    }
+    console.log(id);
+    console.log(Array_Cart[id - 1]);
+    console.log(arr[id - 1].quantitiy);
+    arr[id - 1].quantitiy += 1;
+    quantity =  arr[id - 1].quantitiy;
+    q.textContent = quantity;
+    console.log("gave + 1 and change quantity to :" + arr[id - 1].quantitiy)
+  
 
 });
 bottom_left.appendChild(plus);
@@ -176,9 +195,9 @@ placeorder.addEventListener("click", () =>{
 
 
 
-price1.textContent = GetSum(Array_Cart);
-price2.textContent = ShippingSum(Array_Cart);
-price3.textContent = GetTotal();
+price1.textContent = "$ " + GetSum(Array_Cart);
+price2.textContent = "$ " + ShippingSum(Array_Cart);
+price3.textContent = "$ " + GetTotal();
 
 
 

@@ -326,65 +326,52 @@ function objects_shop()
             btn.addEventListener('click', (e) =>{
 
                 row.innerHTML = "";
+                let test = false;
 
               console.clear()
 
+              console.log("TEST "+ test);
                 //Default
               if(Array_Cart.length == 0){
                
+                console.log("FIRST ARRAY ITEM ADDED")
                     Array_Cart.push(Array[btn.id]);
               }else{
 
-               // console.log("Min 1Item already exitsts ");     
-                // console.log(Array_Cart);
-                // console.log(Array_Cart[Array_Cart.length - 1])
-                if(Array_Cart[Array_Cart.length - 1].id == e.target.id){
-                    console.log("Item already exists " + Array_Cart[e.target.id]);
-                    Array_Cart[Array_Cart.length - 1].quantitiy += 1;
+for(let i = 0; i < Array_Cart.length; i++){
 
-                    console.log(Array_Cart[Array_Cart.length - 1].quantitiy);
-                    
-                }else{
-                    Array_Cart.push(Array[btn.id]);
-                }
+    console.log("I: " + i);
+        if(Array_Cart[i].id == e.target.id){
+            console.log("Item with the id " + Array_Cart[i].id + " already exists : " + Array_Cart[i].name);          
+           Array_Cart[i].quantitiy += 1;
+         console.log("Quantity " + Array_Cart[i].quantitiy);
+            console.log("ITEM FOUND STOP LOOP");
+            test = true;
 
-
-
-                    //console.log(e.target.id + " vs " + Array_Cart[e.target.id - 1].id)
-
-                    
-
-                //console.log(Array_Cart[i])
-                console.log(Array_Cart)
-                console.log("Count " + count)
-
-
-                
-            }
+            console.log("Updated TEST "+ test);
+            break;
             
-               
-                //ADD ONTO, oben wird erst hiernach ausgeführt
-             
+        }
+    
+}
 
+if(test != true){
+    console.log("ADDED ITEM TO ARRAY");
+    Array_Cart.push(Array[btn.id]);
+}
 
+                //console.log(Array_Cart)
+                // console.log("Count " + count)    
 
-
-
-
-
-
-
-
-
-//Display sth
-
-                for(let k=0;k<Array_Cart.length;k++)
-                {
-                console.log(Array_Cart[k]);
                 console.log(Array_Cart)
+            }
+           
+  for(let k=0;k<Array_Cart.length;k++)
+                {
+                //console.log("ARRAY CART " + Array_Cart[k]); 
+console.log(Array_Cart[k].id)
 
-                
-                DisplayCartItems(`img/${Array_Cart[k].img}`, Array_Cart[k].name, Array[k].desc, Array[k].price, Array_Cart[k].quantitiy, Array_Cart);
+                DisplayCartItems(`img/${Array_Cart[k].img}`, Array_Cart[k].name, Array[k].desc, Array[k].price, GetQuantity(Array_Cart[k].quantitiy), Array_Cart, Array_Cart[k].id);
                 }
 
                console.log("--------NEW--------");
@@ -398,7 +385,9 @@ function objects_shop()
 }
 
 
-
+export function GetQuantity(quantity){
+    return quantity;
+}
 
 
 
