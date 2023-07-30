@@ -174,6 +174,9 @@ bottom_right.appendChild(trash);
 
 function Remove(arr, item){
 arr.splice(item.id, 1);
+
+//Display Cart again
+DisplayCart();
 }
 
 
@@ -248,6 +251,17 @@ return sumall;
 
 }
 
+
+function DisplayCart(){
+
+    row.innerHTML = "";
+    for(let k=0;k<Array_Cart.length;k++)
+                {
+console.log(Array_Cart[k].id)
+                DisplayCartItems(`img/${Array_Cart[k].img}`, Array_Cart[k].name, Array[k].desc, Array[k].price, GetQuantity(Array_Cart[k].quantitiy), Array_Cart, Array_Cart[k].id);
+                }
+
+}
 
 
 
